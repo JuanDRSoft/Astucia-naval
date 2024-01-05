@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 const Lose = ({ reset }) => {
-  const emojis = ["😢", "😞", "😠"]; // Puedes agregar más emojis
+  const emojis = ["😢", "😞", "😠"];
 
   useEffect(() => {
     const confettiContainer = document.getElementById("confetti-container");
@@ -9,10 +9,10 @@ const Lose = ({ reset }) => {
     for (let i = 0; i < 40; i++) {
       const confetti = document.createElement("div");
       confetti.className = "emoji";
-      const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)]; // Selecciona un emoji aleatorio
+      const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
       confetti.innerHTML = randomEmoji;
-      confetti.style.left = `${Math.random() * 100}vw`; // Posición horizontal aleatoria
-      confetti.style.animationDelay = `${Math.random() * 10}s`; // Duración de animación aleatoria
+      confetti.style.left = `${Math.random() * 100}vw`;
+      confetti.style.animationDelay = `${Math.random() * 10}s`;
       confettiContainer.appendChild(confetti);
     }
   }, [emojis]);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Win = ({ reset }) => {
-  const [confettiCount, setConfettiCount] = useState(50); // Número de confetis
+  const [confettiCount, setConfettiCount] = useState(50);
 
   const userName = localStorage.getItem("user");
 
@@ -11,8 +11,8 @@ const Win = ({ reset }) => {
     for (let i = 0; i < confettiCount; i++) {
       const confetti = document.createElement("div");
       confetti.className = "confetti";
-      confetti.style.left = `${Math.random() * 100}%`; // Posición horizontal aleatoria
-      confetti.style.animationDelay = `${Math.random() * 6}s`; // Retraso aleatorio
+      confetti.style.left = `${Math.random() * 100}%`;
+      confetti.style.animationDelay = `${Math.random() * 6}s`;
       confettiContainer.appendChild(confetti);
     }
   }, [confettiCount]);

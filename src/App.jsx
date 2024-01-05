@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Alerta from "./components/Alerta";
+import Instrucciones from "./components/Instrucciones";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </Routes>
 
       <Alerta />
+      <Instrucciones />
     </BrowserRouter>
   );
 }

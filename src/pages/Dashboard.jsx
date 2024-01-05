@@ -214,7 +214,7 @@ const Dashboard = () => {
             ))}
 
             {!start && (
-              <div className="fixed w-full h-screen bg-black/45 top-0 left-0 flex justify-center items-center">
+              <div className="fixed w-full z-20 h-screen bg-black/45 top-0 left-0 flex justify-center items-center">
                 <button
                   className="bg-white p-2 w-[50%] rounded-xl font-bold uppercase shadow border-2 border-black"
                   onClick={iniciar}
@@ -227,6 +227,13 @@ const Dashboard = () => {
             <span className="festejo-animation"> </span>
           </div>
         </div>
+      </div>
+
+      <div
+        className="cursor-pointer fixed -right-12 bg-red-500 bottom-36 text-white font-bold -rotate-90 p-2 rounded-t-lg"
+        onClick={reset}
+      >
+        Reiniciar Juego
       </div>
     </div>
   );
